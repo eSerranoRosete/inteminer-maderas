@@ -1,5 +1,5 @@
 import React from "react";
-import { IFRequestBody } from "../pages/api/mail";
+import { type IFRequestBody } from "../pages/api/mail";
 import { XCircleIcon } from "@heroicons/react/24/outline";
 import { formatCurrency } from "../lib/computeResult";
 

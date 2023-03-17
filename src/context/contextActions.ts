@@ -1,5 +1,5 @@
 import { useMemo, useReducer } from "react";
-import { IFLocation } from "../lib/locations";
+import { type IFLocation } from "../lib/locations";
 import { createInitialState, reducer } from "./reducer";
 
 export const appContext = (locations: IFLocation[]) => {

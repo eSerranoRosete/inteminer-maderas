@@ -1,4 +1,4 @@
-import { IFLocation } from "../lib/locations";
+import { type IFLocation } from "../lib/locations";
 
 export interface IFState {
   community: string;

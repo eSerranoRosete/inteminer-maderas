@@ -38,12 +38,12 @@ export function computeResult(data: IFDataInput) {
   months -= 36;
   debt -= periodPayment1 * 36;
 
-  let periodPayment2 = (debt * 0.01) / (1 - Math.pow(1.01, -months));
-  let periodTerm2 = 120 - 36;
+  const periodPayment2 = (debt * 0.01) / (1 - Math.pow(1.01, -months));
+  const periodTerm2 = 120 - 36;
 
   for (let i = 0; i < periodTerm2; i++) {
-    let interest = debt * 0.01;
-    let capital = periodPayment2 - interest;
+    const interest = debt * 0.01;
+    const capital = periodPayment2 - interest;
     debt -= capital;
     months--;
   }

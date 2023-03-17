@@ -1,9 +1,9 @@
-import { NextApiRequest, NextApiResponse } from "next";
+import { type NextApiRequest, type NextApiResponse } from "next";
 import { renderToStaticMarkup } from "react-dom/server";
 import sgMail from "@sendgrid/mail";
-import { IFResultData } from "../../lib/computeResult";
+import { type IFResultData } from "../../lib/computeResult";
 import { EmailTemplate } from "../../lib/email/EmailTemplate";
-import { IFState } from "../../context/reducer";
+import { type IFState } from "../../context/reducer";
 
 export interface IFRequestBody {
   inputs: IFState;
@@ -26,8 +26,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const data: IFRequestBody = JSON.parse(req.body);
 
     const stringTemplate = renderToStaticMarkup(EmailTemplate(data));
-
-    console.log(data);
 
     sgMail.setApiKey(api_key);
 

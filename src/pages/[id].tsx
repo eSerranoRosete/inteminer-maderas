@@ -1,5 +1,10 @@
 import { type NextPage } from "next";
-import { ChangeEvent, FormEventHandler, useCallback, useState } from "react";
+import {
+  type ChangeEvent,
+  type FormEventHandler,
+  useCallback,
+  useState,
+} from "react";
 
 import { locations } from "./../lib/locations";
 import { computeResult } from "../lib/computeResult";
@@ -7,7 +12,7 @@ import { useRouter } from "next/router";
 import { useClientData } from "../lib/hooks/useClientData";
 import { appContext } from "../context/contextActions";
 import { Form } from "../components/Form";
-import { IFRequestBody } from "./api/mail";
+import { type IFRequestBody } from "./api/mail";
 import { LoadingScreen } from "../components/LoadingScreen";
 import Result from "../components/Result";
 
