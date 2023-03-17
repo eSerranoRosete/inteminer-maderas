@@ -30,7 +30,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     sgMail.setApiKey(api_key);
 
     const msg = {
-      to: "eserranor98@gmail.com",
+      to: data.targetEmail,
       from: "cotizador@inteminer.com",
       subject: `Cotización en ${data.locationName}`,
       html: stringTemplate,
