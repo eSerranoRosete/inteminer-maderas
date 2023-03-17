@@ -28,7 +28,7 @@ export const locations: IFLocation[] = [
   {
     name: "Ciudad Maderas Sierra",
     options: [10, 5, 1],
-    landPrice: 4900,
+    landPrice: 5000,
   },
   {
     name: "Ciudad Maderas Privada Peninsula",
