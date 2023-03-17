@@ -10,7 +10,7 @@ import { locations } from "./../lib/locations";
 import { computeResult } from "../lib/computeResult";
 import { useRouter } from "next/router";
 import { useClientData } from "../lib/hooks/useClientData";
-import { appContext } from "../context/contextActions";
+import { useAppContext } from "../context/contextActions";
 import { Form } from "../components/Form";
 import { type IFRequestBody } from "./api/mail";
 import { LoadingScreen } from "../components/LoadingScreen";
@@ -21,7 +21,7 @@ const Home: NextPage = () => {
   const { id } = router.query;
 
   const { data, ready } = useClientData(id as string);
-  const { actions, state } = appContext(locations);
+  const { actions, state } = useAppContext(locations);
   const [resultData, setResultData] = useState<IFRequestBody>();
 
   const onSubmit: FormEventHandler<HTMLFormElement> = useCallback(

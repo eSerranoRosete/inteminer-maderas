@@ -2,7 +2,7 @@ import { useMemo, useReducer } from "react";
 import { type IFLocation } from "../lib/locations";
 import { createInitialState, reducer } from "./reducer";
 
-export const appContext = (locations: IFLocation[]) => {
+export const useAppContext = (locations: IFLocation[]) => {
   const [state, dispatch] = useReducer(reducer, createInitialState(locations));
 
   const actions = useMemo(

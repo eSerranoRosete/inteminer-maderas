@@ -1,5 +1,5 @@
 import React from "react";
-import { IFRequestBody } from "../../pages/api/mail";
+import { type IFRequestBody } from "../../pages/api/mail";
 import { formatCurrency } from "../computeResult";
 
 export const EmailTemplate = ({
