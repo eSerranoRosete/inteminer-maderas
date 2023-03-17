@@ -25,13 +25,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     const data: IFRequestBody = JSON.parse(req.body);
 
-    const stringTemplate = renderToStaticMarkup(
-      EmailTemplate({
-        name: "Eduardo",
-        email: "eserrano@inteminer.com",
-        tel: "5527192790",
-      })
-    );
+    const stringTemplate = renderToStaticMarkup(EmailTemplate(data));
 
     console.log(data);
 
@@ -46,7 +40,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     sgMail
       .send(msg)
-      .then(() => res.json({ message: "Email Sent" }))
-      .catch(() => res.json({ message: "An unexpected error ocurred" }));
+      .then(() => res.status(200).json({ message: "Email Sent" }))
+      .catch(() =>
+        res.status(500).json({ message: "An unexpected error ocurred" })
+      );
   }
 }

@@ -45,13 +45,13 @@ const Home: NextPage = () => {
       };
 
       // Hit API for sending lead email
-      // fetch("/api/mail", {
-      //   method: "POST",
-      //   body: JSON.stringify(requestBody),
-      // })
-      //   .then((res) => res.json())
-      //   .then((data) => console.log(data))
-      //   .catch((e) => console.log(e.message));
+      fetch("/api/mail", {
+        method: "POST",
+        body: JSON.stringify(requestBody),
+      })
+        .then((res) => res.json())
+        .then((data) => console.log(data))
+        .catch((e) => console.log(e.message));
 
       setResultData(requestBody);
     },
@@ -74,23 +74,30 @@ const Home: NextPage = () => {
 
   return (
     <>
-      {/* <Form
-        locations={locations}
-        displayName={data.name}
-        currentArea={state.area}
-        currentTerm={state.term}
-        currentLocation={state.community}
-        onSubmit={onSubmit}
-        onLocationChange={updateCommunity}
-        onAreaChange={actions.setArea}
-        onTermChange={actions.setTerm}
-        onPaymentChange={actions.setPayment}
-        setName={actions.setName}
-        setEmail={actions.setEmail}
-        setPhone={actions.setPhone}
-      />
-      {resultData && <Result />} */}
-      <Result resultData={resultData} />
+      {!resultData && (
+        <Form
+          locations={locations}
+          displayName={data.name}
+          currentArea={state.area}
+          currentTerm={state.term}
+          currentLocation={state.community}
+          onSubmit={onSubmit}
+          onLocationChange={updateCommunity}
+          onAreaChange={actions.setArea}
+          onTermChange={actions.setTerm}
+          onPaymentChange={actions.setPayment}
+          setName={actions.setName}
+          setEmail={actions.setEmail}
+          setPhone={actions.setPhone}
+          leadFieldsRequired
+        />
+      )}
+      {resultData && (
+        <Result
+          resultData={resultData}
+          onClose={() => setResultData(undefined)}
+        />
+      )}
     </>
   );
 };

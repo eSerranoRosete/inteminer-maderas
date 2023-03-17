@@ -25,11 +25,11 @@ export const createInitialState = (locations: IFLocation[]) => {
   const firstLocation = locations[0];
 
   return {
-    community: firstLocation?.name as any,
+    community: firstLocation?.name as string,
     area: 112,
     term: 20,
-    payment: 0,
-    landPrice: firstLocation?.landPrice as any,
+    payment: firstLocation?.options[0] as number,
+    landPrice: firstLocation?.landPrice as number,
   };
 };
 
