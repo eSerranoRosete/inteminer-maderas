@@ -60,13 +60,15 @@ export const Form = ({
               className="select-bordered select"
               onChange={(e) => onLocationChange(e)}
             >
-              {locations.map((locations, i) => (
+              {locations.map((location, i) => (
                 <option
                   key={i}
-                  value={locations.name}
-                  label={locations.name}
-                  data-lp={locations.landPrice}
-                />
+                  value={location.name}
+                  label={location.name}
+                  data-lp={location.landPrice}
+                >
+                  {location.name}
+                </option>
               ))}
             </select>
           </div>
