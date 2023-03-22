@@ -32,7 +32,7 @@ export default function Result({ resultData, onClose }: IFProps) {
             <span className="float-right">{resultData.inputs.area} m2</span>
           </p>
           <p>
-            <b className="mr-2">Plazo de adquisición:</b>
+            <b className="mr-2">Plazo de financiamiento:</b>
             <span className="float-right">{resultData.inputs.term} años</span>
           </p>
           <p>
@@ -46,7 +46,7 @@ export default function Result({ resultData, onClose }: IFProps) {
             </span>
           </p>
           <p>
-            <b className="mr-2">Engnche de:</b>
+            <b className="mr-2">Enganche de:</b>
             <span className="float-right">
               {formatCurrency(resultData.resultData.payment)}
             </span>
