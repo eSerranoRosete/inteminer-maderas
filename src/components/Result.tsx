@@ -106,7 +106,7 @@ export default function Result({ resultData, onClose }: IFProps) {
             type="button"
             className="btn-primary btn-block btn-md btn gap-2 text-xs text-white"
           >
-            Contacta a tu asesor
+            Realizar otra cotización
           </button>
         </div>
       </div>
