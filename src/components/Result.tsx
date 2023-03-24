@@ -1,7 +1,7 @@
 import React from "react";
 import { type IFRequestBody } from "../pages/api/mail";
-import { XCircleIcon } from "@heroicons/react/24/outline";
 import { formatCurrency } from "../lib/computeResult";
+import { Button } from "./buttons/Button";
 
 interface IFProps {
   resultData: IFRequestBody;
@@ -10,7 +10,6 @@ interface IFProps {
 export default function Result({ resultData, onClose }: IFProps) {
   return (
     <div className="h-full w-full bg-white" onClick={onClose}>
-      <XCircleIcon className="absolute right-2 top-2 h-6 w-6 cursor-pointer hover:scale-125" />
       <div className="m-auto w-full max-w-xl p-6 pt-10">
         <img
           src="https://cotizador.inteminer.com/static/images/logo-color.svg"
@@ -105,12 +104,7 @@ export default function Result({ resultData, onClose }: IFProps) {
           </p>
           <hr className="my-5" />
 
-          <button
-            type="button"
-            className="btn-primary btn-block btn-md btn gap-2 text-xs text-white"
-          >
-            Realizar otra cotización
-          </button>
+          <Button label="Regresar al cotizador" />
         </div>
       </div>
     </div>

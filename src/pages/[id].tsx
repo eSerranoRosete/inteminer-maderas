@@ -15,6 +15,7 @@ import { Form } from "../components/Form";
 import { type IFRequestBody } from "./api/mail";
 import { LoadingScreen } from "../components/LoadingScreen";
 import Result from "../components/Result";
+import Head from "next/head";
 
 const Home: NextPage = () => {
   const router = useRouter();
@@ -23,6 +24,8 @@ const Home: NextPage = () => {
   const { data, ready } = useClientData(id as string);
   const { actions, state } = useAppContext(locations);
   const [resultData, setResultData] = useState<IFRequestBody>();
+
+  console.log("🧠", state);
 
   const onSubmit: FormEventHandler<HTMLFormElement> = useCallback(
     (e) => {
@@ -79,6 +82,10 @@ const Home: NextPage = () => {
 
   return (
     <>
+      <Head>
+        <title>Cotizador Ciudad Maderas</title>
+        <link rel="shortcut icon" href="/favicon.svg" type="image/svg" />
+      </Head>
       {!resultData && (
         <Form
           locations={locations}
