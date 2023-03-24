@@ -98,10 +98,13 @@ export default function Result({ resultData, onClose }: IFProps) {
           </p>
           <p className="text-xs">** Con un 1% de interés aplicable</p>
           <p className="text-xs">*** Con un 1.25% de interés aplicable</p>
-          <hr className="my-5" />
-          <p className="mb-5 text-center text-xs">
-            Para conocer promociones y descuentos:
+          <br />
+          <p className="text-xs">
+            Puedes realizar aportaciones a capital sin penalización para que el
+            monto de tus mensualidades disminuya.
           </p>
+          <hr className="my-5" />
+
           <button
             type="button"
             className="btn-primary btn-block btn-md btn gap-2 text-xs text-white"
