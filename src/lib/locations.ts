@@ -38,6 +38,6 @@ export const locations: IFLocation[] = [
   {
     name: "Ciudad Maderas San Juan del Río",
     options: [10, 5, 1],
-    landPrice: 3600,
+    landPrice: 3900,
   },
 ];
