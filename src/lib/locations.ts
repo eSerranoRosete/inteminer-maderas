@@ -18,7 +18,7 @@ export const locations: IFLocation[] = [
   {
     name: "Ciudad Maderas Caribe",
     options: [10, 5, 1],
-    landPrice: 4200,
+    landPrice: 4060,
   },
   {
     name: "Ciudad Maderas Norte Leon",
@@ -33,11 +33,11 @@ export const locations: IFLocation[] = [
   {
     name: "Ciudad Maderas Privada Peninsula",
     options: [10, 5, 1],
-    landPrice: 5200,
+    landPrice: 4900,
   },
   {
     name: "Ciudad Maderas San Juan del Río",
     options: [10, 5, 1],
-    landPrice: 3900,
+    landPrice: 4700,
   },
 ];
